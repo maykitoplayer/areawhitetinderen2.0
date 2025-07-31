@@ -292,7 +292,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Transform your Facebook into an authentic showcase</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {facebookCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
@@ -310,7 +310,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Connect with interesting people in your locality</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {gpsCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
@@ -328,7 +328,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Master magnetic WhatsApp conversations</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {whatsCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
@@ -390,7 +390,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Transform your Facebook profile into an authentic and engaging showcase</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {facebookCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
@@ -408,7 +408,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Discover and connect with people in your locality using smart geolocation</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {gpsCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
@@ -426,7 +426,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Create magnetic conversations on WhatsApp with proven communication techniques</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {whatsCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
