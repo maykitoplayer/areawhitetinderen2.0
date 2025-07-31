@@ -14,7 +14,10 @@ import {
   TrendingUp,
   Award,
   Clock,
-  Instagram
+  Instagram,
+  Facebook,
+  MapPin,
+  MessageSquare
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -158,6 +161,42 @@ export default function MembersArea() {
     }
   ];
 
+  const facebookCheckModules: ModuleProps[] = [
+    {
+      id: 8,
+      title: 'Facebook Check Fundamentals',
+      description: 'Transform your Facebook profile into an authentic, stylish, and highly engaged showcase.',
+      duration: '45 min',
+      isUnlocked: true,
+      isCompleted: false,
+      type: 'video'
+    }
+  ];
+
+  const gpsCheckModules: ModuleProps[] = [
+    {
+      id: 9,
+      title: 'GPS Check Fundamentals',
+      description: 'Discover and connect with interesting people in your locality using geolocation technology.',
+      duration: '40 min',
+      isUnlocked: true,
+      isCompleted: false,
+      type: 'video'
+    }
+  ];
+
+  const whatsCheckModules: ModuleProps[] = [
+    {
+      id: 10,
+      title: 'WhatsCheck Fundamentals',
+      description: 'Create magnetic and engaging conversations with women on WhatsApp using proven techniques.',
+      duration: '55 min',
+      isUnlocked: true,
+      isCompleted: false,
+      type: 'video'
+    }
+  ];
+
   const progressPercentage = Math.round((courseModules.filter(m => m.isCompleted).length / courseModules.length) * 100);
 
   const renderDashboard = () => (
@@ -241,6 +280,60 @@ export default function MembersArea() {
           ))}
         </div>
       </div>
+
+      {/* Facebook Check Section */}
+      <div>
+        <div className="flex items-center mb-6">
+          <div className="p-3 bg-blue-100 rounded-lg mr-4">
+            <Facebook className="w-8 h-8 text-blue-600" />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900">Facebook Check</h3>
+            <p className="text-gray-600">Transform your Facebook into an authentic showcase</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {facebookCheckModules.map(module => (
+            <Module key={module.id} {...module} />
+          ))}
+        </div>
+      </div>
+
+      {/* GPS Check Section */}
+      <div>
+        <div className="flex items-center mb-6">
+          <div className="p-3 bg-green-100 rounded-lg mr-4">
+            <MapPin className="w-8 h-8 text-green-600" />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900">GPS Check</h3>
+            <p className="text-gray-600">Connect with interesting people in your locality</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {gpsCheckModules.map(module => (
+            <Module key={module.id} {...module} />
+          ))}
+        </div>
+      </div>
+
+      {/* WhatsCheck Section */}
+      <div>
+        <div className="flex items-center mb-6">
+          <div className="p-3 bg-emerald-100 rounded-lg mr-4">
+            <MessageSquare className="w-8 h-8 text-emerald-600" />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900">WhatsCheck</h3>
+            <p className="text-gray-600">Master magnetic WhatsApp conversations</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {whatsCheckModules.map(module => (
+            <Module key={module.id} {...module} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 
@@ -281,6 +374,60 @@ export default function MembersArea() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {instaCheckModules.map(module => (
+            <Module key={module.id} {...module} />
+          ))}
+        </div>
+      </div>
+
+      {/* Facebook Check Course Section */}
+      <div className="mt-12">
+        <div className="flex items-center mb-6">
+          <div className="p-3 bg-blue-100 rounded-lg mr-4">
+            <Facebook className="w-8 h-8 text-blue-600" />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900">Facebook Check Course</h3>
+            <p className="text-gray-600">Transform your Facebook profile into an authentic and engaging showcase</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {facebookCheckModules.map(module => (
+            <Module key={module.id} {...module} />
+          ))}
+        </div>
+      </div>
+
+      {/* GPS Check Course Section */}
+      <div className="mt-12">
+        <div className="flex items-center mb-6">
+          <div className="p-3 bg-green-100 rounded-lg mr-4">
+            <MapPin className="w-8 h-8 text-green-600" />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900">GPS Check Course</h3>
+            <p className="text-gray-600">Discover and connect with people in your locality using smart geolocation</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {gpsCheckModules.map(module => (
+            <Module key={module.id} {...module} />
+          ))}
+        </div>
+      </div>
+
+      {/* WhatsCheck Course Section */}
+      <div className="mt-12">
+        <div className="flex items-center mb-6">
+          <div className="p-3 bg-emerald-100 rounded-lg mr-4">
+            <MessageSquare className="w-8 h-8 text-emerald-600" />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900">WhatsCheck Course</h3>
+            <p className="text-gray-600">Create magnetic conversations on WhatsApp with proven communication techniques</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {whatsCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
         </div>
@@ -365,6 +512,51 @@ export default function MembersArea() {
           </div>
           <button className="w-full bg-pink-500 text-white py-2 px-4 rounded-lg hover:bg-pink-600 transition-colors">
             Access Templates
+          </button>
+        </div>
+
+        <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="flex items-center mb-4">
+            <div className="p-3 bg-blue-100 rounded-lg mr-4">
+              <Facebook className="w-6 h-6 text-blue-600" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900">Facebook Templates</h3>
+              <p className="text-gray-600">Profile optimization templates</p>
+            </div>
+          </div>
+          <button className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors">
+            Access Templates
+          </button>
+        </div>
+
+        <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="flex items-center mb-4">
+            <div className="p-3 bg-green-100 rounded-lg mr-4">
+              <MapPin className="w-6 h-6 text-green-600" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900">Location Guide</h3>
+              <p className="text-gray-600">Best places to meet people</p>
+            </div>
+          </div>
+          <button className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-colors">
+            View Guide
+          </button>
+        </div>
+
+        <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="flex items-center mb-4">
+            <div className="p-3 bg-emerald-100 rounded-lg mr-4">
+              <MessageSquare className="w-6 h-6 text-emerald-600" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900">WhatsApp Scripts</h3>
+              <p className="text-gray-600">Conversation starters and flows</p>
+            </div>
+          </div>
+          <button className="w-full bg-emerald-500 text-white py-2 px-4 rounded-lg hover:bg-emerald-600 transition-colors">
+            Access Scripts
           </button>
         </div>
       </div>
