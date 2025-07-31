@@ -256,7 +256,7 @@ export default function MembersArea() {
       {/* Course Modules */}
       <div>
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Course Modules</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courseModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
@@ -274,7 +274,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Build an irresistible Instagram profile</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {instaCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
@@ -292,7 +292,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Transform your Facebook into an authentic showcase</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {facebookCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
@@ -310,7 +310,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Connect with interesting people in your locality</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {gpsCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
@@ -328,7 +328,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Master magnetic WhatsApp conversations</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {whatsCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
