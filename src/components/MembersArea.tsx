@@ -274,7 +274,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Build an irresistible Instagram profile</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {instaCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
@@ -372,7 +372,7 @@ export default function MembersArea() {
             <p className="text-gray-600">Master Instagram to attract followers and real connections</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {instaCheckModules.map(module => (
             <Module key={module.id} {...module} />
           ))}
